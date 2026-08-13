@@ -1,0 +1,43 @@
+# Gradle
+.gradle
+build/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# Spring Boot
+application-local.properties
+application-local.yml
+
+# IDE
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Build artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# Java
+target/
+*.classpath
+.project
+.settings/
+bin/
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,30 @@
+server:
+  port: 0
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: false
+    open-in-view: false
+    show-sql: false
+  security:
+    oauth2:
+      authorizationserver:
+        issuer: http://localhost:9000
+
+app:
+  oauth2:
+    fixed-scope: api.access
