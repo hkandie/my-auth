@@ -1,4 +1,4 @@
-package com.moauthoriser;
+package com.fhlbdm.moauthoriser;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,7 +1,7 @@
-package com.moauthoriser.security;
+package com.fhlbdm.moauthoriser.security;
 
-import com.moauthoriser.persistence.ClientCredentialsEntity;
-import com.moauthoriser.persistence.ClientCredentialsJpaRepository;
+import com.fhlbdm.moauthoriser.persistence.ClientCredentialsEntity;
+import com.fhlbdm.moauthoriser.persistence.ClientCredentialsJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;

@@ -1,4 +1,4 @@
-package com.moauthoriser.persistence;
+package com.fhlbdm.moauthoriser.persistence;
 
 import lombok.Getter;
 import lombok.Setter;

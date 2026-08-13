@@ -1,7 +1,9 @@
-package com.moauthoriser.security;
+package com.fhlbdm.moauthoriser.security;
 
-import com.moauthoriser.persistence.ClientCredentialsEntity;
-import com.moauthoriser.persistence.ClientCredentialsJpaRepository;
+import com.fhlbdm.moauthoriser.persistence.ClientCredentialsEntity;
+import com.fhlbdm.moauthoriser.persistence.ClientCredentialsJpaRepository;
+import com.fhlbdm.moauthoriser.security.MemberClientRepository;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

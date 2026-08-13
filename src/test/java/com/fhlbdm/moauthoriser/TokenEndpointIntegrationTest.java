@@ -1,4 +1,4 @@
-package com.moauthoriser;
+package com.fhlbdm.moauthoriser;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

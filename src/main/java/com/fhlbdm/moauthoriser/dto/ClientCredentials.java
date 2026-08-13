@@ -1,4 +1,4 @@
-package com.moauthoriser.dto;
+package com.fhlbdm.moauthoriser.dto;
 
 import lombok.Data;
 

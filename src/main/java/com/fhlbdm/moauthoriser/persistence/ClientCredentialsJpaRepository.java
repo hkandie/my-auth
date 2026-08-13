@@ -1,4 +1,4 @@
-package com.moauthoriser.persistence;
+package com.fhlbdm.moauthoriser.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;

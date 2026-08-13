@@ -2,6 +2,8 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '4.1.0'
 	id 'io.spring.dependency-management' version '1.1.7'
+	id 'jacoco'
+	id 'pmd'
 }
 
 group = 'com.example'
@@ -35,4 +37,76 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+	finalizedBy jacocoTestReport
+}
+
+jacoco {
+	toolVersion = "0.8.10"
+}
+
+jacocoTestReport {
+	dependsOn test
+	reports {
+		xml.required = true
+		html.required = true
+		csv.required = false
+	}
+}
+
+pmd {
+	toolVersion = "6.55.0"
+	ignoreFailures = false
+	ruleSetConfig = resources.text.fromFile('config/pmd-ruleset.xml')
+	consoleOutput = true
+}
+
+pmdMain {
+	reports {
+		html.required = true
+		xml.required = true
+	}
+}
+
+jacocoTestCoverageVerification {
+	violationRules {
+		rule {
+			element = 'PACKAGE'
+			excludes = [
+				'com.fhlbdm.moauthoriser.config',
+				'com.fhlbdm.moauthoriser.persistence',
+				'com.fhlbdm.moauthoriser.Application'
+			]
+
+			limit {
+				counter = 'LINE'
+				value = 'COVEREDRATIO'
+				minimum = 0.50
+			}
+		}
+		rule {
+			element = 'CLASS'
+			excludes = [
+				'**/config/**',
+				'**/persistence/**',
+				'**/entity/**',
+				'**/entities/**',
+				'**/Application.class'
+			]
+
+			limit {
+				counter = 'LINE'
+				value = 'COVEREDRATIO'
+				minimum = 0.50
+			}
+		}
+	}
+}
+
+// Ensure PMD and coverage verification run as part of check
+jacocoTestReport.dependsOn test
+jacocoTestCoverageVerification.dependsOn jacocoTestReport
+pmdMain.dependsOn classes
+
+tasks.named('check') {
+	dependsOn pmdMain, jacocoTestCoverageVerification
 }

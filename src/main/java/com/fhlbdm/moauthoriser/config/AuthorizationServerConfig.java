@@ -1,4 +1,4 @@
-package com.moauthoriser.config;
+package com.fhlbdm.moauthoriser.config;
 
 import com.nimbusds.jose.JWSAlgorithm;
 import com.nimbusds.jose.jwk.JWKSet;

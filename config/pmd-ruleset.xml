@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<ruleset name="MOAuthoriser PMD Rules"
+		 xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0
+		 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+	<description>Custom PMD rules for MOAuthoriser project</description>
+
+	<!-- Code Size Rules -->
+	<rule ref="category/java/design.xml/NPathComplexity">
+		<properties>
+			<property name="reportLevel" value="200"/>
+		</properties>
+	</rule>
+	<rule ref="category/java/design.xml/ExcessiveParameterList">
+		<properties>
+			<property name="minimum" value="10"/>
+		</properties>
+	</rule>
+	<rule ref="category/java/design.xml/TooManyFields">
+		<properties>
+			<property name="maxfields" value="15"/>
+		</properties>
+	</rule>
+	<rule ref="category/java/design.xml/TooManyMethods">
+		<properties>
+			<property name="maxmethods" value="30"/>
+		</properties>
+	</rule>
+
+	<!-- Best Practices -->
+	<rule ref="category/java/bestpractices.xml/AvoidPrintStackTrace"/>
+	<rule ref="category/java/bestpractices.xml/CheckResultSet"/>
+	<rule ref="category/java/bestpractices.xml/PreserveStackTrace"/>
+	<rule ref="category/java/bestpractices.xml/SwitchStmtsShouldHaveDefault"/>
+	<rule ref="category/java/bestpractices.xml/UnusedFormalParameter"/>
+	<rule ref="category/java/bestpractices.xml/UnusedLocalVariable"/>
+	<rule ref="category/java/bestpractices.xml/UnusedPrivateField"/>
+	<rule ref="category/java/bestpractices.xml/UnusedPrivateMethod"/>
+
+	<!-- Error Prone -->
+	<rule ref="category/java/errorprone.xml/AvoidBranchingStatementAsLastStatement"/>
+	<rule ref="category/java/errorprone.xml/AvoidCatchingNPE"/>
+	<rule ref="category/java/errorprone.xml/AvoidCatchingThrowable"/>
+	<rule ref="category/java/errorprone.xml/AvoidDuplicateLiterals">
+		<properties>
+			<property name="maxDuplicateLiterals" value="4"/>
+		</properties>
+	</rule>
+	<rule ref="category/java/errorprone.xml/AvoidFieldNameMatchingMethodName"/>
+	<rule ref="category/java/errorprone.xml/AvoidMultipleUnaryOperators"/>
+	<rule ref="category/java/errorprone.xml/ClassCastExceptionWithToArray"/>
+	<rule ref="category/java/errorprone.xml/ComparisonWithNaN"/>
+	<rule ref="category/java/errorprone.xml/ConstructorCallsOverridableMethod"/>
+	<rule ref="category/java/errorprone.xml/DoNotCallSystemExit"/>
+	<rule ref="category/java/errorprone.xml/DoNotExtendJavaLangThrowable"/>
+	<rule ref="category/java/errorprone.xml/DoNotThrowExceptionInFinally"/>
+	<rule ref="category/java/errorprone.xml/ImplicitSwitchFallThrough"/>
+	<rule ref="category/java/errorprone.xml/JumbledIncrementer"/>
+	<rule ref="category/java/errorprone.xml/MissingStaticMethodInNonInstantiatableClass"/>
+	<rule ref="category/java/errorprone.xml/ReturnFromFinallyBlock"/>
+	<rule ref="category/java/errorprone.xml/UnconditionalIfStatement"/>
+	<rule ref="category/java/errorprone.xml/UnnecessaryConditionalForLastReturn"/>
+	<rule ref="category/java/errorprone.xml/UnnecessaryContinue"/>
+	<rule ref="category/java/errorprone.xml/UnusedNullCheckInEquals"/>
+
+	<!-- Performance -->
+	<rule ref="category/java/performance.xml/AddEmptyString"/>
+	<rule ref="category/java/performance.xml/AppendCharacterWithChar"/>
+	<rule ref="category/java/performance.xml/AvoidArrayLoops"/>
+	<rule ref="category/java/performance.xml/AvoidInstantiatingObjectsInLoops"/>
+	<rule ref="category/java/performance.xml/ConsecutiveLiteralAppends">
+		<properties>
+			<property name="threshold" value="3"/>
+		</properties>
+	</rule>
+	<rule ref="category/java/performance.xml/InefficientStringBuffering"/>
+	<rule ref="category/java/performance.xml/InsufficientStringBuffering"/>
+	<rule ref="category/java/performance.xml/StringInstantiation"/>
+	<rule ref="category/java/performance.xml/StringToString"/>
+	<rule ref="category/java/performance.xml/UseArrayListInsteadOfVector"/>
+	<rule ref="category/java/performance.xml/UseStringBufferForStringAppends"/>
+
+</ruleset>

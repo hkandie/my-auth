@@ -1,4 +1,4 @@
-package com.moauthoriser.security;
+package com.fhlbdm.moauthoriser.security;
 
 import org.springframework.security.oauth2.server.authorization.token.JwtEncodingContext;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenCustomizer;
